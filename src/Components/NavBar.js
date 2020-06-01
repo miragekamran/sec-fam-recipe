@@ -4,6 +4,8 @@ import { Button } from "reactstrap";
 import styled from "styled-components";
 import logo from "../images/recipe.png";
 import { getToken } from "../utils/axiosWithAuth";
+// import HomePageSteph from './HomePageSteph';
+
 
 const NavDiv = styled.div`
   margin-top: 2%;
