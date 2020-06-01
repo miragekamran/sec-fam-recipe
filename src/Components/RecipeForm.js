@@ -37,7 +37,8 @@ export default class RecipeForm extends Component {
         console.log("Res is: ", res);
         this.props.history.push("/dashboard");
       })
-      .catch((err) => console.log("Error is: ", err.response));
+      .catch((err) => console.log("Error is: ", err.response))
+      // .finally(window.location.reaload());
   };
 
   render() {

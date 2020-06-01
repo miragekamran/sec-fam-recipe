@@ -20,9 +20,12 @@ function RecipeCard(props) {
     console.log("deleting");
     axiosWithAuth()
       .delete(`/api/recipes/${id}`)
-      .then((res) => console.log(res))
-      .catch((err) => console.log("delete error ", err));
-    //   .finally(() => window.location.reload());
+      .then((res) => {
+        console.log('recipe is deleted: ', res)
+        window.location.reload()
+      })
+      .catch((err) => console.log("delete error ", err))
+      // .finally(() => window.location.reload());
   }
 
   return (

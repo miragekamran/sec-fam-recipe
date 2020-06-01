@@ -18,7 +18,7 @@ const BottonsDiv = styled.div`
   margin-top: 5%;
 `;
 
-export default function NavBar(props) {
+export default function NavBar() {
   const signedIn = getToken();
   // const id = localStorage.getItem('id');
   return (
@@ -35,6 +35,10 @@ export default function NavBar(props) {
             <Link to="/" className="NavButtons">
               Home
             </Link>
+          </Button>
+          &nbsp;&nbsp;&nbsp;
+          <Button color="secondary">
+          <a href="https://marketing-page.netlify.app/" className="NavButtons"> Marketing</a>
           </Button>
           &nbsp;&nbsp;&nbsp;
           <Button color="secondary">
