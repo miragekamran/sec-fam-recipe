@@ -1,0 +1,332 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* fnu login form style */
+
+.login-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-bottom: 30px;
+  border: silver 2px solid;
+  border-radius: 2px;
+  box-shadow: gray 3px 5px;
+  font-size: 15px;
+}
+.login-form-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+.login-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.login-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.my-input {
+  width: 60%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  margin-bottom: 1%;
+  margin-left: 20%;
+}
+
+.login-button {
+  margin-bottom: 1%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  margin-left: 2%;
+}
+
+.alert-message-boxes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.alert-message {
+  margin-bottom: 1%;
+}
+
+.signup-button {
+  margin-bottom: 1%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  margin-left: 2%;
+  background-color: gray;
+  color: white;
+}
+
+/* fnu signup form style */
+
+.signup-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+  margin-left: 30%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  padding-bottom: 20px;
+  border: silver 2px solid;
+  border-radius: 2px;
+  box-shadow: gray 3px 5px;
+  font-size: 15px;
+}
+
+.signup-form-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+
+.signup-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.signup-inputs {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1%;
+}
+
+.signup-input {
+  width: 60%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  margin-bottom: 1%;
+  margin-left: 20%;
+}
+
+.signup-checkbox-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.signup-checkbox-title {
+  margin-right: 3%;
+}
+
+.signup-checkbox {
+  margin-top: 1%;
+}
+
+.signup-create-button {
+  margin-bottom: 1%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  margin-left: 2%;
+}
+
+.alert-message-boxes {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+}
+
+.alert-message {
+  margin-bottom: 1%;
+}
+
+.signup-login-button {
+  margin-bottom: 1%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 50%;
+  margin-left: 2%;
+  background-color: gray;
+  color: white;
+}
+
+/* fnu organization dashboard two stlye */
+
+.dash-button-box {
+  margin-top: 3%;
+}
+
+.dash-button {
+  padding: 10px 40px;
+  font-size: 20px;
+  background-color: #36343e;
+  color: white;
+}
+
+.dash-recipes-box {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  margin-top: 2%;
+}
+
+.recipe-box {
+  width: 100%;
+  padding: 30px 180px;
+  text-align: left;
+  /* border: black solid 10px; */
+}
+
+.recipe-photo {
+  width: 1000px;
+  margin-bottom: 1%;
+  border-radius: 10px;
+}
+
+.recipe-header {
+  padding-left: 15px;
+}
+
+.recipe-btn {
+  margin-top: 1%;
+  margin-left: 1.5%;
+  background-color: #36343e;
+  color: white;
+}
+
+/* organization dashbaord two card stlye */
+
+.recipeCard-btn {
+  width: 160px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 1%;
+  margin-left: 1.5%;
+  background-color: #36343e;
+  color: white;
+  font-size: 20px;
+}
+
+.trevor-form-container {
+  max-width: 50%;
+  border: 2px solid black;
+  box-shadow: 5px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  /* align-content: center; */
+  /* justify-items: center; */
+  margin-left: 400px;
+  margin-top: 100px;
+}
+
+.trevor-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px;
+}
+
+.trevor-input {
+  width: 90%;
+  display: flex;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.trevor-button {
+  align-content: center;
+  width: 40%;
+  background: black;
+  color: white;
+  font-size: 1.1rem;
+  border: 1px solid white;
+  box-shadow: 2px 4px black;
+}
+.joseScard1 {
+  margin-right: 15%;
+}
+.joseScard2 {
+  width: 46%;
+}
+.joseSbuttonCard {
+  width: 100%;
+}
+.itemCard {
+  max-width: 800px;
+  /* height: 235px; */
+  max-height: 800px;
+  border-radius: 5px;
+  box-shadow: 0 19px 10px rgba(51, 51, 51, 0.12);
+  background-color: #ffffff;
+  z-index: 2;
+  position: relative;
+  margin-left: 300px;
+}
+
+.Styling-CardGroups {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.CardHeader-Items {
+  background-color: #efe2ba;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: inline-block;
+}
+
+.card-image {
+  width: 60%;
+  margin: 2% 0;
+}
+.Buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.Items-Buttons {
+  background-color: #4056a1;
+  color: #efe2ba;
+  margin-top: 2%;
+}
+.Items-Buttons:hover {
+  background-color: #f13c20;
+  color: white;
+}
+
+.SaveEditButton {
+  margin-bottom: 1.5%;
+  margin-right: 2%;
+}
+
+.individualCards {
+  width: 50%;
+}
