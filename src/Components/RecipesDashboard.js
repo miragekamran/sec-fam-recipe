@@ -20,6 +20,12 @@ function RecipeCard(props) {
     margin-left: 5%;
   `;
 
+  const FixImg = styled.img`
+    height:80%;
+    width:80%
+    align-item: center;   
+`;
+
   const StyledH1 = styled.h1`
     font-size: 2.5rem;
     font-weight: 300;
@@ -32,7 +38,7 @@ function RecipeCard(props) {
   return (
     <RecipesContainer>
       <NavBar />
-      <StyledH1>Welcome to your Dashboard</StyledH1>
+      <StyledH1>Welcome to Visitor Dashboard</StyledH1>
       <StyledH2>You can view recipes!</StyledH2>
       {recipes
         ? recipes.map((recipe) => (
@@ -47,12 +53,17 @@ function RecipeCard(props) {
                 {recipe.instructions}
                 <br />
                 {recipe.category}
+                <br />
+                <FixImg alt="food" src={recipe.photo} />
               </p>
             </RecipeContainer>
           ))
         : "loading"}
     </RecipesContainer>
   );
+
+
+  
 }
 
 const RecipesContainer = styled.div`
