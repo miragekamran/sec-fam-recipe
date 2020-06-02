@@ -45,9 +45,6 @@ export default function HomePage() {
               <CardTitle>
                 <strong>Families:</strong>
               </CardTitle>
-              {/* <CardSubtitle>
-                <strong>Features:</strong>
-              </CardSubtitle> */}
               <CardText>
                 Families can view all posted recipes, and filter by title,
                 category, and as well as choose their favorite ones!
@@ -70,9 +67,6 @@ export default function HomePage() {
               <CardTitle>
                 <strong>Restaurants:</strong>
               </CardTitle>
-              {/* <CardSubtitle>
-                <strong>Features:</strong>
-              </CardSubtitle> */}
               <CardText>
                 Sign up to list, edit, and update your recipes anywhere and
                 anytime!.
@@ -95,4 +89,3 @@ export default function HomePage() {
   );
 }
 
-//Welcome Page talks about sad burnt up animals

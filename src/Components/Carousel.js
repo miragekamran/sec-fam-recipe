@@ -70,9 +70,7 @@ export default function CarouselComponent() {
   });
 
   return (
-    <div>
-      {/* Carousel starts here */}
-
+    <center>
       <Carousel
         className="Carousel"
         activeIndex={activeIndex}
@@ -96,7 +94,6 @@ export default function CarouselComponent() {
           onClickHandler={next}
         />
       </Carousel>
-      {/* Carousel ends here */}
-    </div>
+    </center>
   );
 }
