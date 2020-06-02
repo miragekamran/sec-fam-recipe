@@ -6,18 +6,18 @@ import logo from "../images/recipe.png";
 import { getToken } from "../utils/axiosWithAuth";
 // import HomePageSteph from './HomePageSteph';
 
-
 const NavDiv = styled.div`
   margin-top: 2%;
-  display: flex;
+  // display: flex;
   justify-content: space-between;
-  margin-left: 15%;
+  // margin-left: 15%;
 `;
 const LogoDiv = styled.div`
-  display: flex;
+  // display: flex;
 `;
 const BottonsDiv = styled.div`
-  margin-top: 5%;
+  margin-top: 1%;
+  margin-bottom: 3%;
 `;
 
 export default function NavBar() {
@@ -28,54 +28,60 @@ export default function NavBar() {
       <NavDiv>
         <LogoDiv>
           <img className="navImage" src={logo} alt="logo" />
-          <h4>
-            Secret Family <br></br> Recipes!
+          <h4 style={{ marginLeft: "10px" }}>
+            Secret <br></br> Family <br></br> Recipes!
           </h4>
         </LogoDiv>
         <BottonsDiv>
-          <Button color="secondary">
-            <Link to="/" className="NavButtons">
+          <Link to="/" className="NavButtons">
+            <Button color="secondary" size="small">
               Home
-            </Link>
+            </Button>
+          </Link>
+          &nbsp;&nbsp;&nbsp;
+          <Button color="secondary" size="small">
+            <a
+              href="https://marketing-page.netlify.app/"
+              className="NavButtons"
+            >
+              {" "}
+              Marketing
+            </a>
           </Button>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary">
-          <a href="https://marketing-page.netlify.app/" className="NavButtons"> Marketing</a>
-          </Button>
-          &nbsp;&nbsp;&nbsp;
-          <Button color="secondary">
-            <Link to="/recipeDashboard" className="NavButtons">
+          <Link to="/recipeDashboard" className="NavButtons">
+            <Button color="secondary" size="small">
               Visitor Dashboard
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary">
-            <Link to="/dashboard" className="NavButtons">
+          <Link to="/dashboard" className="NavButtons">
+            <Button color="secondary" size="small">
               User Dashboard
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           &nbsp;&nbsp;&nbsp;
           {!signedIn && (
-            <Button color="secondary">
-              <Link to="/login" className="NavButtons">
+            <Link to="/login" className="NavButtons">
+              <Button color="secondary" size="small">
                 Login
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           &nbsp;&nbsp;&nbsp;
           {!signedIn && (
-            <Button color="info">
-              <Link to="/signUp" className="NavButtons">
+            <Link to="/signUp" className="NavButtons">
+              <Button color="info" size="small">
                 Sign Up
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           {signedIn && (
-            <Button color="info">
-              <Link to="/logout" className="NavButtons">
+            <Link to="/logout" className="NavButtons">
+              <Button color="info" size="small">
                 LogOut
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           &nbsp;&nbsp;&nbsp;
         </BottonsDiv>

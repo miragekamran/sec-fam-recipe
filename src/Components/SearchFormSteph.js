@@ -2,17 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const SearchBar = styled.input`
-  background-color: #7681a5;
+  background-color: light gray;
   text: #20c8dd;
-  padding: 1%;
+  padding: 0.2%;
 `;
 
 const SearchForm = (props) => {
   return (
-    <section className="search-form" style={{margin:'20px'}}>
+    <section style={{margin:'20px'}}>
       <SearchBar
         value={props.value}
-        placeHolder="Search"
+        placeholder="Search Recipes"
         onChange={props.onChange}
       />
     </section>

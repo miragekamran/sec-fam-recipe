@@ -1,21 +1,17 @@
 .App {
   text-align: center;
-
   width: 85%;
   margin-left: 5%;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -26,11 +22,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -39,8 +33,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* Nav styling starts here */
 .NavButtons {
   color: white;
   text-decoration: none;
@@ -52,10 +44,10 @@
 }
 .navImage {
   width: 20%;
+  margin-bottom: 10px;
 }
-
 hr:after {
-  content: 'RECIPES';
+  content: "RECIPES";
   display: inline-block;
   position: relative;
   top: -14px;
@@ -67,17 +59,11 @@ hr:after {
   -moz-transform: rotate(20deg);
   transform: rotate(20deg);
 }
-
-/* Nav styling Ends here */
-/* Carouse Image styling starts here */
 .Carousel img {
-  width: 50%;
-  border-radius: 30px;
+  width: 70%;
+  border-radius: 10px;
   opacity: 0.7;
 }
-/* Carouse Image styling Ends here */
-/* login form style */
-
 .login-form {
   display: flex;
   flex-direction: column;

@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 
-const SuperSignUpDiv = styled.div`
+const SignUpDiv = styled.div`
   display: flex;
   width: 100%;
   height: 50%;
@@ -32,9 +32,9 @@ export default function HomePage() {
   return (
     <div>
       <NavBar />
-      <h1>Welcome to Secret Family Recipies !</h1>
+      <h1 style={{marginBottom:'2%', marginTop:'2%'}}>Welcome to Secret Family Recipies !</h1>
       <Carousel />
-      <SuperSignUpDiv>
+      <SignUpDiv>
         <div>
           <Card className="joseScard1">
             <CardImg
@@ -45,18 +45,15 @@ export default function HomePage() {
               <CardTitle>
                 <strong>Families:</strong>
               </CardTitle>
-              {/* <CardSubtitle>
-                <strong>Features:</strong>
-              </CardSubtitle> */}
               <CardText>
                 Families can view all posted recipes, and filter by title,
                 category, and as well as choose their favorite ones!
               </CardText>
-              <Button className="joseSbuttonCard" color="info">
-                <Link to="/signUp" className="NavButtons">
+              <Link to="/signUp" className="NavButtons">
+                <Button className="joseSbuttonCard" color="info">
                   Sign Up
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </CardBody>
           </Card>
         </div>
@@ -70,22 +67,19 @@ export default function HomePage() {
               <CardTitle>
                 <strong>Restaurants:</strong>
               </CardTitle>
-              {/* <CardSubtitle>
-                <strong>Features:</strong>
-              </CardSubtitle> */}
               <CardText>
                 Sign up to list, edit, and update your recipes anywhere and
                 anytime!.
               </CardText>
-              <Button className="joseSbuttonCard" color="info">
-                <Link to="/signUp" className="NavButtons">
+              <Link to="/signUp" className="NavButtons">
+                <Button className="joseSbuttonCard" color="info">
                   Sign Up
-                </Link>
-              </Button>
+                </Button>
+              </Link>
             </CardBody>
           </Card>
         </div>
-      </SuperSignUpDiv>
+      </SignUpDiv>
       <FooterDiv>
         <p>
           11 SE. Wentworth St.<br></br>Wonderland,Forever 01156
@@ -95,4 +89,3 @@ export default function HomePage() {
   );
 }
 
-//Welcome Page talks about sad burnt up animals
