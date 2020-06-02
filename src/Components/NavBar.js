@@ -6,18 +6,19 @@ import logo from "../images/recipe.png";
 import { getToken } from "../utils/axiosWithAuth";
 // import HomePageSteph from './HomePageSteph';
 
-
 const NavDiv = styled.div`
   margin-top: 2%;
-  display: flex;
+  // display: flex;
   justify-content: space-between;
-  margin-left: 15%;
+  // margin-left: 15%;
 `;
 const LogoDiv = styled.div`
-  display: flex;
+  
+  // display: flex;
 `;
 const BottonsDiv = styled.div`
-  margin-top: 5%;
+  margin-top: 1%;
+  margin-bottom: 3%;
 `;
 
 export default function NavBar() {
@@ -27,36 +28,42 @@ export default function NavBar() {
     <div>
       <NavDiv>
         <LogoDiv>
-          <img className="navImage" src={logo} alt="logo" />
-          <h4>
-            Secret Family <br></br> Recipes!
+          <img className="navImage" src={logo} alt="logo"/>
+          <h4 style={{marginLeft:'10px'}}>
+            Secret <br></br> Family <br></br> Recipes!
           </h4>
         </LogoDiv>
         <BottonsDiv>
-          <Button color="secondary">
+          <Button color="secondary" size="small">
             <Link to="/" className="NavButtons">
               Home
             </Link>
           </Button>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary">
-          <a href="https://marketing-page.netlify.app/" className="NavButtons"> Marketing</a>
+          <Button color="secondary" size="small">
+            <a
+              href="https://marketing-page.netlify.app/"
+              className="NavButtons"
+            >
+              {" "}
+              Marketing
+            </a>
           </Button>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary">
+          <Button color="secondary" size="small">
             <Link to="/recipeDashboard" className="NavButtons">
               Visitor Dashboard
             </Link>
           </Button>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary">
+          <Button color="secondary" size="small">
             <Link to="/dashboard" className="NavButtons">
               User Dashboard
             </Link>
           </Button>
           &nbsp;&nbsp;&nbsp;
           {!signedIn && (
-            <Button color="secondary">
+            <Button color="secondary" size="small">
               <Link to="/login" className="NavButtons">
                 Login
               </Link>
@@ -64,14 +71,14 @@ export default function NavBar() {
           )}
           &nbsp;&nbsp;&nbsp;
           {!signedIn && (
-            <Button color="info">
+            <Button color="info" size="small">
               <Link to="/signUp" className="NavButtons">
                 Sign Up
               </Link>
             </Button>
           )}
           {signedIn && (
-            <Button color="info">
+            <Button color="info" size="small">
               <Link to="/logout" className="NavButtons">
                 LogOut
               </Link>

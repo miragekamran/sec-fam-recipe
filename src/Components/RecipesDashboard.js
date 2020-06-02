@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axiosWithAuth from "../utils/axiosWithAuth";
 import styled from "styled-components";
-// import { Button } from "@material-ui/core";
 import NavBar from "./NavBar";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { findByLabelText } from "@testing-library/react";
 
 const useStyles = makeStyles({
   root: {
@@ -20,7 +15,6 @@ const useStyles = makeStyles({
 });
 
 function RecipeCard(props) {
-  // console.log('friends props: ', props)
   const [recipes, setRecipes] = useState([]);
 
   useEffect(() => {
@@ -31,33 +25,15 @@ function RecipeCard(props) {
       });
   }, []);
 
-  const StyledH2 = styled.h2`
-    margin-left: 5%;
-  `;
-
-  const FixImg = styled.img`
-    height:80%;
-    width:80%
-    align-item: center;   
-`;
-
-  const StyledH1 = styled.h1`
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: #00cccc;
-    // margin: 0 0 24px;
-    margin-left: 2%;
-    margin-bottom: 2%;
-  `;
-
   const classes = useStyles();
 
   return (
     <RecipesContainer>
       <NavBar />
-      <StyledH1>Welcome to Visitor Dashboard</StyledH1>
-      <StyledH2>You can view recipes!</StyledH2>
-      
+      <h4 style={{ marginTop: "40px", marginBottom: "30px" }}>
+        Recipes are read only. To Add or Delete recipes, please sign up.
+      </h4>
+
       <center>
         <Card className={classes.root}>
           <div>
@@ -65,8 +41,9 @@ function RecipeCard(props) {
               ? recipes.map((recipe) => (
                   <CardContent key={recipe.id} style={{ textAlign: "left" }}>
                     <CardMedia
+                      style={{ borderRadius: "5px" }}
                       component="img"
-                      alt="Recipe photo here"
+                      alt="Recipe photo"
                       height="140"
                       src={recipe.photo}
                       title="Recipe photo"
@@ -83,7 +60,7 @@ function RecipeCard(props) {
                       component="p"
                     >
                       <div className="Styling-CardGroups">
-                        <strong>Source:</strong>
+                        <strong>Source: </strong>
                         {recipe.source}
                       </div>
                     </Typography>
@@ -129,14 +106,6 @@ function RecipeCard(props) {
 
 const RecipesContainer = styled.div`
   position: relative;
-`;
-
-const RecipeContainer = styled.div`
-  padding: 15px;
-  margin: 15px;
-  background-color: smokewhite;
-  border: black 1px solid;
-  text-align: center;
 `;
 
 export default RecipeCard;

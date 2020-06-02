@@ -1,15 +1,7 @@
 import React, { useState, useEffect } from "react";
-
 import axios from "axios";
-
 import SearchForm from "./SearchFormSteph";
-
-import styled from "styled-components";
 import RecipeCard from "./RecipeCardSteph";
-
-const Heading = styled.h1`
-  color: #ac3e59;
-`;
 
 function HomePage() {
   //KEEP
@@ -37,10 +29,6 @@ function HomePage() {
 
   return (
     <div>
-      <center>
-        <Heading>Search Recipes</Heading>
-      </center>
-
       <center>
         <SearchForm value={search} onChange={handleChange} />
       </center>

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "../index.css";
-// import api from "../utils/api";
-import { Field } from "@material-ui/core";
 import NavBar from "./NavBar";
 import axios from "axios";
-import { TextField, Button } from '@material-ui/core';
+import { TextField, Button } from "@material-ui/core";
 
 export default class RecipeForm extends Component {
   state = {
@@ -47,7 +45,7 @@ export default class RecipeForm extends Component {
     return (
       <div>
         <NavBar />
-        <form onSubmit={this.addRecipe} style={{margin: '70px'}}>
+        <form onSubmit={this.addRecipe} style={{ margin: "70px" }}>
           <TextField
             type="text"
             name="title"
@@ -96,7 +94,14 @@ export default class RecipeForm extends Component {
             onChange={this.handleChange}
           />
           <div />
-          <Button variant="contained" color="primary" type="submit" style={{margin: '20px'}}>Add Recipe</Button>
+          <Button
+            variant="contained"
+            color="primary"
+            type="submit"
+            style={{ margin: "20px" }}
+          >
+            Add Recipe
+          </Button>
         </form>
       </div>
     );
