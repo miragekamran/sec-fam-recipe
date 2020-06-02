@@ -9,7 +9,7 @@ const SearchBar = styled.input`
 
 const SearchForm = (props) => {
   return (
-    <section className="search-form">
+    <section className="search-form" style={{margin:'20px'}}>
       <SearchBar
         value={props.value}
         placeHolder="Search"

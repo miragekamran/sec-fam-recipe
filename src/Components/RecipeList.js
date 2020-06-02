@@ -48,7 +48,7 @@ function HomePage() {
         return (
           <RecipeCard
             title={props.title}
-            ingredients={props.ingredient}
+            ingredients={props.ingredients}
             instructions={props.instructions}
             source={props.source}
             category={props.category}

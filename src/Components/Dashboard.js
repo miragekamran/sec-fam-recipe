@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <>
       <NavBar />
-      <div className="button-box">
+      <div className="button-box" style={{margin: '50px'}}>
         <Link to="/recipeform">
           <button className="dash-button">Add A New Recipe</button>
         </Link>

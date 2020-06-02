@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axiosWithAuth from "../utils/axiosWithAuth";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import { findByLabelText } from "@testing-library/react";
 
-const FixImg = styled.img`
-    height:80%;
-    width:80%
-    align-item: center;   
-`;
-const CardDiv = styled.div`
-  color: #20c8dd;
-  border: 2px dotted #f4f7f6;
-  width: 75%;
-  height: 75%;
-  padding: 3%;
-  margin: 4%;
-`;
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 1400,
+  },
+});
 
 const RecipeCard = (props) => {
   const [recipes, setRecipes] = useState([]);
@@ -38,25 +39,55 @@ const RecipeCard = (props) => {
     //   .finally(() => window.location.reload());
   }
 
-  return (
-    <CardDiv className="recipecard">
-      <h2>{props.title}</h2>
+  const classes = useStyles();
 
-      <p>Ingredients: {props.ingredient}</p>
-      <p>Instructions: {props.instructions}</p>
-      <p>Source: {props.source}</p>
-      <p>Category: {props.category}</p>
-      <Button
-        onClick={(e) => deleteRecipe(e)}
-        variant="contained"
-        color="primary"
-      >
-        delete
-      </Button>
-      <FixImg alt="food" src={props.photo} />
-    </CardDiv>
+  return (
+    <center>
+      <Card className={classes.root}>
+        <div>
+          <CardMedia
+            component="img"
+            alt="Contemplative Reptile"
+            height="140"
+            src={props.photo}
+            title="Contemplative Reptile"
+          />
+          <CardContent style={{ textAlign: "left" }}>
+            <Typography gutterBottom variant="h5" component="h2">
+              {props.title}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              <strong>Source: </strong>
+              {props.source}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              <strong>Ingredients: </strong>
+              {props.ingredients}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              <strong>Instructions: </strong>
+              {props.instructions}
+            </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              <strong>Category: </strong>
+              {props.category}
+            </Typography>
+          </CardContent>
+        </div>
+        <CardActions>
+          <Button size="small" color="primary">
+            Share
+          </Button>
+          <Button size="small" color="primary">
+            Learn More
+          </Button>
+          <Button onClick={(e) => deleteRecipe(e)} size="small" color="primary">
+            delete
+          </Button>
+        </CardActions>
+      </Card>
+    </center>
   );
 };
-//also add delete button
-export default RecipeCard;
 
+export default RecipeCard;
