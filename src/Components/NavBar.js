@@ -13,7 +13,6 @@ const NavDiv = styled.div`
   // margin-left: 15%;
 `;
 const LogoDiv = styled.div`
-  
   // display: flex;
 `;
 const BottonsDiv = styled.div`
@@ -28,17 +27,17 @@ export default function NavBar() {
     <div>
       <NavDiv>
         <LogoDiv>
-          <img className="navImage" src={logo} alt="logo"/>
-          <h4 style={{marginLeft:'10px'}}>
+          <img className="navImage" src={logo} alt="logo" />
+          <h4 style={{ marginLeft: "10px" }}>
             Secret <br></br> Family <br></br> Recipes!
           </h4>
         </LogoDiv>
         <BottonsDiv>
-          <Button color="secondary" size="small">
-            <Link to="/" className="NavButtons">
+          <Link to="/" className="NavButtons">
+            <Button color="secondary" size="small">
               Home
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           &nbsp;&nbsp;&nbsp;
           <Button color="secondary" size="small">
             <a
@@ -50,39 +49,39 @@ export default function NavBar() {
             </a>
           </Button>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary" size="small">
-            <Link to="/recipeDashboard" className="NavButtons">
+          <Link to="/recipeDashboard" className="NavButtons">
+            <Button color="secondary" size="small">
               Visitor Dashboard
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           &nbsp;&nbsp;&nbsp;
-          <Button color="secondary" size="small">
-            <Link to="/dashboard" className="NavButtons">
+          <Link to="/dashboard" className="NavButtons">
+            <Button color="secondary" size="small">
               User Dashboard
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           &nbsp;&nbsp;&nbsp;
           {!signedIn && (
-            <Button color="secondary" size="small">
-              <Link to="/login" className="NavButtons">
+            <Link to="/login" className="NavButtons">
+              <Button color="secondary" size="small">
                 Login
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           &nbsp;&nbsp;&nbsp;
           {!signedIn && (
-            <Button color="info" size="small">
-              <Link to="/signUp" className="NavButtons">
+            <Link to="/signUp" className="NavButtons">
+              <Button color="info" size="small">
                 Sign Up
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           {signedIn && (
-            <Button color="info" size="small">
-              <Link to="/logout" className="NavButtons">
+            <Link to="/logout" className="NavButtons">
+              <Button color="info" size="small">
                 LogOut
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           )}
           &nbsp;&nbsp;&nbsp;
         </BottonsDiv>
