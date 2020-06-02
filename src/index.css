@@ -290,6 +290,7 @@ code {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
+  /* text-align: left; */
 }
 
 .CardHeader-Items {
